@@ -1,0 +1,57 @@
+SpaceFinder: CognitoIdentityPoolAuthStandardPolicy
+--------------------------------------------------
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "execute-api:Invoke",
+      "Effect": "Allow",
+      "Resource": [
+        {
+          API STUFF
+        }
+      ]
+    }
+  ]
+}
+
+SpaceFinder: CognitoIdentityPoolAuthStandardRole
+------------------------------------------------
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "cognito-identity.amazonaws.com"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "ForAnyValue:StringLike": {
+          "cognito-identity.amazonaws.com:amr": "authenticated"
+        }
+      }
+    }
+  ]
+}
+
+
+SpaceFinder: CognitoIdentityPoolUnAuthRole
+------------------------------------------------
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "cognito-identity.amazonaws.com"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "ForAnyValue:StringLike": {
+          "cognito-identity.amazonaws.com:amr": "unauthenticated"
+        }
+      }
+    }
+  ]
+}
