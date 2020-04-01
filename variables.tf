@@ -51,3 +51,13 @@ variable "server_side_token_check" {
   type    = bool
   default = true
 }
+
+variable "callback_urls" {
+  type    = list
+  default = ["http://example.com"]
+}
+
+variable "default_redirect_uri" {
+  type    = string
+  default = "http://example.com"
+}

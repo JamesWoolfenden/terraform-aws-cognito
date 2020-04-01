@@ -4,5 +4,5 @@ resource "aws_cognito_user_group" "unauthenticated" {
   role_arn     = aws_iam_role.unauthenticated[count.index].arn
   user_pool_id = var.user_pool_id
   precedence   = 42
-  count = var.unauthenticated_grouprole_count
+  count        = var.unauthenticated_grouprole_count
 }

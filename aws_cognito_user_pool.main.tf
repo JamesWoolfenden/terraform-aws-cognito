@@ -4,7 +4,7 @@ resource "aws_cognito_user_pool" "main" {
   username_attributes = ["email"]
 
   schema {
-    attribute_data_type      = String
+    attribute_data_type      = "String"
     name                     = "email"
     required                 = true
     mutable                  = false
@@ -17,7 +17,7 @@ resource "aws_cognito_user_pool" "main" {
   }
 
   schema {
-    attribute_data_type      = String
+    attribute_data_type      = "String"
     name                     = "given_name"
     required                 = true
     mutable                  = true
@@ -30,7 +30,7 @@ resource "aws_cognito_user_pool" "main" {
   }
 
   schema {
-    attribute_data_type      = string
+    attribute_data_type      = "String"
     name                     = "family_name"
     required                 = true
     mutable                  = true
@@ -43,7 +43,7 @@ resource "aws_cognito_user_pool" "main" {
   }
 
   schema {
-    attribute_data_type      = string
+    attribute_data_type      = "String"
     name                     = "phone_number"
     required                 = true
     mutable                  = true
