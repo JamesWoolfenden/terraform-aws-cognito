@@ -16,6 +16,10 @@ module "cognito" {
 }
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
 ## Providers
 
 | Name | Version |
@@ -25,7 +29,7 @@ module "cognito" {
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | authenticated\_grouprole\_count | Toggle an 'authenticated user' role associated with a specific application | `number` | n/a | yes |
 | callback\_urls | n/a | `list` | <pre>[<br>  "http://example.com"<br>]</pre> | no |
 | common\_tags | Implemnts the common tags scheme | `map` | n/a | yes |
