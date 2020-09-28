@@ -14,7 +14,6 @@ module "cognito" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
@@ -22,25 +21,25 @@ No requirements.
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
-| aws  | n/a     |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-| Name                            | Description                                                                                     | Type     | Default                                    | Required |
-| ------------------------------- | ----------------------------------------------------------------------------------------------- | -------- | ------------------------------------------ | :------: |
-| authenticated_grouprole_count   | Toggle an 'authenticated user' role associated with a specific application                      | `number` | n/a                                        |   yes    |
-| callback_urls                   | n/a                                                                                             | `list`   | <pre>[<br> "http://example.com"<br>]</pre> |    no    |
-| common_tags                     | Implemnts the common tags scheme                                                                | `map`    | n/a                                        |   yes    |
-| default_redirect_uri            | n/a                                                                                             | `string` | `"http://example.com"`                     |    no    |
-| fqdn                            | A fully qualified domain name (eg. ostl.dev.fibrenation.net)                                    | `string` | n/a                                        |   yes    |
-| fqdn_no_env                     | A fully qualified domain name without the environment name (eg. ostl.fibrenation.net)           | `string` | n/a                                        |   yes    |
-| iam_path                        | The path used to namespace IAM resources                                                        | `string` | n/a                                        |   yes    |
-| identity_pool_id                | The identifier of the cognito identity pool to assign roles to                                  | `string` | n/a                                        |   yes    |
-| server_side_token_check         | n/a                                                                                             | `bool`   | `true`                                     |    no    |
-| sldn_dash                       | A second level domain name seprated by dashes (ie. without the tld) (eg. auth-dev-fibrentation) | `string` | n/a                                        |   yes    |
-| unauthenticated_grouprole_count | Toggle an 'unauthenticated user' role associated with a specific application                    | `number` | n/a                                        |   yes    |
-| user_pool_id                    | The identifier of the cognito user pool to assign roles to                                      | `string` | n/a                                        |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| authenticated\_grouprole\_count | Toggle an 'authenticated user' role associated with a specific application | `number` | n/a | yes |
+| callback\_urls | n/a | `list` | <pre>[<br>  "http://example.com"<br>]</pre> | no |
+| common\_tags | Implemnts the common tags scheme | `map` | n/a | yes |
+| default\_redirect\_uri | n/a | `string` | `"http://example.com"` | no |
+| fqdn | A fully qualified domain name (eg. ostl.dev.fibrenation.net) | `string` | n/a | yes |
+| fqdn\_no\_env | A fully qualified domain name without the environment name (eg. ostl.fibrenation.net) | `string` | n/a | yes |
+| iam\_path | The path used to namespace IAM resources | `string` | n/a | yes |
+| identity\_pool\_id | The identifier of the cognito identity pool to assign roles to | `string` | n/a | yes |
+| server\_side\_token\_check | n/a | `bool` | `true` | no |
+| sldn\_dash | A second level domain name seprated by dashes (ie. without the tld) (eg. auth-dev-fibrentation) | `string` | n/a | yes |
+| unauthenticated\_grouprole\_count | Toggle an 'unauthenticated user' role associated with a specific application | `number` | n/a | yes |
+| user\_pool\_id | The identifier of the cognito user pool to assign roles to | `string` | n/a | yes |
 
 ## Outputs
 
