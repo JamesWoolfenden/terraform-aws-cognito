@@ -34,7 +34,7 @@ variable "unauthenticated_grouprole_count" {
 
 variable "common_tags" {
   description = "Implemnts the common tags scheme"
-  type        = map
+  type        = map(any)
 }
 
 variable "fqdn" {
