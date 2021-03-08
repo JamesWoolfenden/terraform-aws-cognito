@@ -35,13 +35,30 @@ No requirements.
 |------|---------|
 | aws | n/a |
 
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [aws_cognito_identity_pool](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_identity_pool) |
+| [aws_cognito_resource_server](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_resource_server) |
+| [aws_cognito_user_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_group) |
+| [aws_cognito_user_pool](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool) |
+| [aws_cognito_user_pool_client](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool_client) |
+| [aws_cognito_user_pool_domain](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool_domain) |
+| [aws_iam_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) |
+| [aws_iam_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | authenticated\_grouprole\_count | Toggle an 'authenticated user' role associated with a specific application | `number` | n/a | yes |
-| callback\_urls | n/a | `list` | <pre>[<br>  "http://example.com"<br>]</pre> | no |
-| common\_tags | Implemnts the common tags scheme | `map` | n/a | yes |
+| callback\_urls | n/a | `list(any)` | <pre>[<br>  "http://example.com"<br>]</pre> | no |
+| common\_tags | Implemnts the common tags scheme | `map(any)` | n/a | yes |
 | default\_redirect\_uri | n/a | `string` | `"http://example.com"` | no |
 | fqdn | A fully qualified domain name (eg. ostl.dev.fibrenation.net) | `string` | n/a | yes |
 | fqdn\_no\_env | A fully qualified domain name without the environment name (eg. ostl.fibrenation.net) | `string` | n/a | yes |
@@ -55,7 +72,6 @@ No requirements.
 ## Outputs
 
 No output.
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ### Contributors
