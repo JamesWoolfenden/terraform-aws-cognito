@@ -33,45 +33,49 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| aws | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
-No Modules.
+No modules.
 
 ## Resources
 
-| Name |
-|------|
-| [aws_cognito_identity_pool](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_identity_pool) |
-| [aws_cognito_resource_server](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_resource_server) |
-| [aws_cognito_user_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_group) |
-| [aws_cognito_user_pool](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool) |
-| [aws_cognito_user_pool_client](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool_client) |
-| [aws_cognito_user_pool_domain](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool_domain) |
-| [aws_iam_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) |
-| [aws_iam_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) |
+| Name | Type |
+|------|------|
+| [aws_cognito_identity_pool.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_identity_pool) | resource |
+| [aws_cognito_resource_server.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_resource_server) | resource |
+| [aws_cognito_user_group.authenticated](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_group) | resource |
+| [aws_cognito_user_group.unauthenticated](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_group) | resource |
+| [aws_cognito_user_pool.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool) | resource |
+| [aws_cognito_user_pool_client.cli](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool_client) | resource |
+| [aws_cognito_user_pool_client.web](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool_client) | resource |
+| [aws_cognito_user_pool_domain.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool_domain) | resource |
+| [aws_iam_role.authenticated_standard](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role.unauthenticated](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_policy_document.authenticated_standard](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| [aws_iam_policy_document.unauthenticated](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| authenticated\_grouprole\_count | Toggle an 'authenticated user' role associated with a specific application | `number` | n/a | yes |
-| callback\_urls | n/a | `list(any)` | <pre>[<br>  "http://example.com"<br>]</pre> | no |
-| common\_tags | Implemnts the common tags scheme | `map(any)` | n/a | yes |
-| default\_redirect\_uri | n/a | `string` | `"http://example.com"` | no |
-| fqdn | A fully qualified domain name (eg. ostl.dev.fibrenation.net) | `string` | n/a | yes |
-| fqdn\_no\_env | A fully qualified domain name without the environment name (eg. ostl.fibrenation.net) | `string` | n/a | yes |
-| iam\_path | The path used to namespace IAM resources | `string` | n/a | yes |
-| identity\_pool\_id | The identifier of the cognito identity pool to assign roles to | `string` | n/a | yes |
-| server\_side\_token\_check | n/a | `bool` | `true` | no |
-| sldn\_dash | A second level domain name seprated by dashes (ie. without the tld) (eg. auth-dev-fibrentation) | `string` | n/a | yes |
-| unauthenticated\_grouprole\_count | Toggle an 'unauthenticated user' role associated with a specific application | `number` | n/a | yes |
-| user\_pool\_id | The identifier of the cognito user pool to assign roles to | `string` | n/a | yes |
+| <a name="input_authenticated_grouprole_count"></a> [authenticated\_grouprole\_count](#input\_authenticated\_grouprole\_count) | Toggle an 'authenticated user' role associated with a specific application | `number` | n/a | yes |
+| <a name="input_callback_urls"></a> [callback\_urls](#input\_callback\_urls) | n/a | `list(any)` | <pre>[<br>  "http://example.com"<br>]</pre> | no |
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Implemnts the common tags scheme | `map(any)` | n/a | yes |
+| <a name="input_default_redirect_uri"></a> [default\_redirect\_uri](#input\_default\_redirect\_uri) | n/a | `string` | `"http://example.com"` | no |
+| <a name="input_fqdn"></a> [fqdn](#input\_fqdn) | A fully qualified domain name (eg. ostl.dev.fibrenation.net) | `string` | n/a | yes |
+| <a name="input_fqdn_no_env"></a> [fqdn\_no\_env](#input\_fqdn\_no\_env) | A fully qualified domain name without the environment name (eg. ostl.fibrenation.net) | `string` | n/a | yes |
+| <a name="input_iam_path"></a> [iam\_path](#input\_iam\_path) | The path used to namespace IAM resources | `string` | n/a | yes |
+| <a name="input_identity_pool_id"></a> [identity\_pool\_id](#input\_identity\_pool\_id) | The identifier of the cognito identity pool to assign roles to | `string` | n/a | yes |
+| <a name="input_server_side_token_check"></a> [server\_side\_token\_check](#input\_server\_side\_token\_check) | n/a | `bool` | `true` | no |
+| <a name="input_sldn_dash"></a> [sldn\_dash](#input\_sldn\_dash) | A second level domain name seprated by dashes (ie. without the tld) (eg. auth-dev-fibrentation) | `string` | n/a | yes |
+| <a name="input_unauthenticated_grouprole_count"></a> [unauthenticated\_grouprole\_count](#input\_unauthenticated\_grouprole\_count) | Toggle an 'unauthenticated user' role associated with a specific application | `number` | n/a | yes |
+| <a name="input_user_pool_id"></a> [user\_pool\_id](#input\_user\_pool\_id) | The identifier of the cognito user pool to assign roles to | `string` | n/a | yes |
 
 ## Outputs
 
-No output.
+No outputs.
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ### Contributors
