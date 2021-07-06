@@ -64,12 +64,12 @@ No modules.
 | <a name="input_callback_urls"></a> [callback\_urls](#input\_callback\_urls) | n/a | `list(any)` | <pre>[<br>  "http://example.com"<br>]</pre> | no |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Implemnts the common tags scheme | `map(any)` | n/a | yes |
 | <a name="input_default_redirect_uri"></a> [default\_redirect\_uri](#input\_default\_redirect\_uri) | n/a | `string` | `"http://example.com"` | no |
-| <a name="input_fqdn"></a> [fqdn](#input\_fqdn) | A fully qualified domain name (eg. ostl.dev.fibrenation.net) | `string` | n/a | yes |
+| <a name="input_fqdn"></a> [fqdn](#input\_fqdn) | A fully qualified domain name | `string` | n/a | yes |
 | <a name="input_fqdn_no_env"></a> [fqdn\_no\_env](#input\_fqdn\_no\_env) | A fully qualified domain name without the environment name (eg. ostl.fibrenation.net) | `string` | n/a | yes |
 | <a name="input_iam_path"></a> [iam\_path](#input\_iam\_path) | The path used to namespace IAM resources | `string` | n/a | yes |
 | <a name="input_identity_pool_id"></a> [identity\_pool\_id](#input\_identity\_pool\_id) | The identifier of the cognito identity pool to assign roles to | `string` | n/a | yes |
 | <a name="input_server_side_token_check"></a> [server\_side\_token\_check](#input\_server\_side\_token\_check) | n/a | `bool` | `true` | no |
-| <a name="input_sldn_dash"></a> [sldn\_dash](#input\_sldn\_dash) | A second level domain name seprated by dashes (ie. without the tld) (eg. auth-dev-fibrentation) | `string` | n/a | yes |
+| <a name="input_sldn_dash"></a> [sldn\_dash](#input\_sldn\_dash) | A second level domain name separated by dashes (ie. without the tld) | `string` | n/a | yes |
 | <a name="input_unauthenticated_grouprole_count"></a> [unauthenticated\_grouprole\_count](#input\_unauthenticated\_grouprole\_count) | Toggle an 'unauthenticated user' role associated with a specific application | `number` | n/a | yes |
 | <a name="input_user_pool_id"></a> [user\_pool\_id](#input\_user\_pool\_id) | The identifier of the cognito user pool to assign roles to | `string` | n/a | yes |
 

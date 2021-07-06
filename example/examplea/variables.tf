@@ -22,9 +22,6 @@ variable "iam_path" {
 variable "authenticated_grouprole_count" {
   type        = number
   description = "Toggle an 'authenticated user' role associated with a specific application"
-  # For example a role that allows users to be in a grouo for auth.dev.fibrenation.net makes no sense
-  # However, a role that allows users to be in a group for ostl.dev.fibrenation.net does make sense.
-  # Therefore we can say that this is '0' the auth project and '1' for any web application project.
 }
 
 variable "unauthenticated_grouprole_count" {
@@ -33,18 +30,18 @@ variable "unauthenticated_grouprole_count" {
 }
 
 variable "common_tags" {
-  description = "Implemnts the common tags scheme"
+  description = "Implements the common tags scheme"
   type        = map(any)
 }
 
 variable "fqdn" {
   type        = string
-  description = "A fully qualified domain name (eg. ostl.dev.fibrenation.net)"
+  description = "A fully qualified domain name"
 }
 
 variable "sldn_dash" {
   type        = string
-  description = "A second level domain name seprated by dashes (ie. without the tld) (eg. auth-dev-fibrentation)"
+  description = "A second level domain name separated by dashes (ie. without the tld)"
 }
 
 variable "server_side_token_check" {
