@@ -2,8 +2,6 @@
 # yamllint disable rule:line-length
 name: Compare
 on:
-  schedule:
-    - cron: "00 7 * * SAT"
   workflow_dispatch:
 jobs:
   tfsec:
@@ -14,6 +12,7 @@ jobs:
         with:
           ref: master
           token: ${{ github.token }}
+          fetch-depth: '0'
       - name: tfsec
         run: |
           pip3 install lastversion
@@ -35,6 +34,7 @@ jobs:
         with:
           ref: master
           token: ${{ github.token }}
+          fetch-depth: '0'
       - name: install checkov
         run: |
           pip3 install checkov
@@ -55,6 +55,7 @@ jobs:
         with:
           ref: master
           token: ${{ github.token }}
+          fetch-depth: '0'
       - uses: actions/setup-python@v2
         with:
           python-version: 3.8
@@ -83,6 +84,7 @@ jobs:
         with:
           ref: master
           token: ${{ github.token }}
+          fetch-depth: '0'
       - name: install kics
         run: |
           pip3 install lastversion
