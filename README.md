@@ -98,6 +98,29 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
+                "cloudfront:updateDistribution"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "cognito-identity:CreateIdentityPool",
+                "cognito-identity:DeleteIdentityPool",
+                "cognito-identity:DescribeIdentityPool",
+                "cognito-identity:UpdateIdentityPool"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
                 "cognito-idp:AddCustomAttributes",
                 "cognito-idp:CreateGroup",
                 "cognito-idp:CreateResourceServer",
@@ -119,20 +142,26 @@ resource "aws_iam_policy" "terraform_pike" {
                 "cognito-idp:UntagResource",
                 "cognito-idp:UpdateGroup",
                 "cognito-idp:UpdateResourceServer",
-                "cognito-idp:UpdateUserPool"
+                "cognito-idp:UpdateUserPool",
+                "cognito-idp:UpdateUserPoolClient",
+                "cognito-idp:UpdateUserPoolDomain"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
-            "Sid": "VisualEditor1",
+            "Sid": "VisualEditor3",
             "Effect": "Allow",
             "Action": [
                 "ec2:DescribeAccountAttributes"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
-            "Sid": "VisualEditor2",
+            "Sid": "VisualEditor4",
             "Effect": "Allow",
             "Action": [
                 "iam:CreateRole",
@@ -143,9 +172,12 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:ListRolePolicies",
                 "iam:PassRole",
                 "iam:TagRole",
+                "iam:UntagRole",
                 "iam:UpdateRoleDescription"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
