@@ -1,6 +1,6 @@
 # terraform-aws-cognito
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-cognito/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-cognito)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-cognito/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-cognito)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-cognito.svg)](https://github.com/JamesWoolfenden/terraform-aws-cognito/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-cognito.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-cognito/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
