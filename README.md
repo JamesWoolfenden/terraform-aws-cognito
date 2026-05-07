@@ -32,7 +32,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
@@ -42,7 +42,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_cognito_identity_pool.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_identity_pool) | resource |
 | [aws_cognito_resource_server.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_resource_server) | resource |
 | [aws_cognito_user_group.authenticated](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_group) | resource |
@@ -59,9 +59,9 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_authenticated_grouprole_count"></a> [authenticated\_grouprole\_count](#input\_authenticated\_grouprole\_count) | Toggle an 'authenticated user' role associated with a specific application | `number` | n/a | yes |
-| <a name="input_callback_urls"></a> [callback\_urls](#input\_callback\_urls) | n/a | `list(any)` | <pre>[<br>  "http://example.com"<br>]</pre> | no |
+| <a name="input_callback_urls"></a> [callback\_urls](#input\_callback\_urls) | n/a | `list(any)` | <pre>[<br/>  "http://example.com"<br/>]</pre> | no |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Implemnts the common tags scheme | `map(any)` | n/a | yes |
 | <a name="input_default_redirect_uri"></a> [default\_redirect\_uri](#input\_default\_redirect\_uri) | n/a | `string` | `"http://example.com"` | no |
 | <a name="input_fqdn"></a> [fqdn](#input\_fqdn) | A fully qualified domain name | `string` | n/a | yes |
